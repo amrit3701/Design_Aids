@@ -4,119 +4,119 @@ import sagetex
 _st_ = sagetex.SageTeXProcessor('main', version='2012/01/16 v2.3.3-69dcb0eb93de', version_check=True)
 _st_.blockbegin()
 try:
-   var('a,A,d,fck,p,k,consst')
+   var('a,A,d,fck,p,k,consst,alpha')
    consst = .067
    consst = consst.n(digits=3)
    z1=(1-(a/A)**2-2*(a/A)*(d/A)-(d/A)**2)/((a/A)*(d/A)+(d/A)**2)
-   z2=(consst*fck**(1/2))/p
+   z2=(consst*fck**(1/2)*alpha)/p
 except:
- _st_.goboom(141)
+ _st_.goboom(150)
 _st_.blockend()
 try:
  _st_.inline(0, latex(z1))
 except:
- _st_.goboom(145)
+ _st_.goboom(154)
 try:
  _st_.inline(1, latex(z2))
 except:
- _st_.goboom(145)
+ _st_.goboom(154)
 try:
  _st_.inline(2, latex(k))
 except:
- _st_.goboom(145)
+ _st_.goboom(154)
 try:
  _st_.inline(3, latex(z1))
 except:
- _st_.goboom(158)
+ _st_.goboom(169)
 try:
  _st_.inline(4, latex(z2))
 except:
- _st_.goboom(158)
+ _st_.goboom(169)
 try:
  _st_.inline(5, latex(k))
 except:
- _st_.goboom(158)
+ _st_.goboom(169)
 _st_.blockbegin()
 try:
    var('D,d,c,phi')
    z=d+c+phi
 except:
- _st_.goboom(167)
+ _st_.goboom(179)
 _st_.blockend()
 try:
  _st_.inline(6, latex(D))
 except:
- _st_.goboom(171)
+ _st_.goboom(183)
 try:
  _st_.inline(7, latex(z))
 except:
- _st_.goboom(171)
+ _st_.goboom(183)
 _st_.blockbegin()
 try:
          var('b,a,B,A')
          z=b-a
          z2=B-A
 except:
- _st_.goboom(192)
+ _st_.goboom(206)
 _st_.blockend()
 try:
  _st_.inline(8, latex(z))
 except:
- _st_.goboom(196)
+ _st_.goboom(210)
 try:
  _st_.inline(9, latex(z2))
 except:
- _st_.goboom(196)
+ _st_.goboom(210)
 _st_.blockbegin()
 try:
          var('p,B,A,a,k,N,cm')
          z=(p*B*(A-a))/8
 except:
- _st_.goboom(221)
+ _st_.goboom(240)
 _st_.blockend()
 try:
  _st_.inline(10, latex(z))
 except:
- _st_.goboom(225)
+ _st_.goboom(244)
 _st_.blockbegin()
 try:
  var('p,B,b,A,a,d')
  z=(p*B)*((A-a)/2-d)
  z2=(p*(B/2))*(((A-a)/2)-d)**2
 except:
- _st_.goboom(241)
+ _st_.goboom(264)
 _st_.blockend()
 try:
  _st_.inline(11, latex(z))
 except:
- _st_.goboom(245)
+ _st_.goboom(268)
 try:
  _st_.inline(12, latex(z2))
 except:
- _st_.goboom(250)
+ _st_.goboom(273)
 _st_.blockbegin()
 try:
          var('tau_v,V_u')
          z=V_u/(b*d)
 except:
- _st_.goboom(256)
+ _st_.goboom(279)
 _st_.blockend()
 try:
  _st_.inline(13, latex(tau_v))
 except:
- _st_.goboom(275)
+ _st_.goboom(300)
 try:
  _st_.inline(14, latex(tau_v))
 except:
- _st_.goboom(279)
+ _st_.goboom(305)
 try:
  _st_.inline(15, latex(z))
 except:
- _st_.goboom(279)
+ _st_.goboom(305)
 try:
  _st_.inline(16, latex(tau_v))
 except:
- _st_.goboom(287)
+ _st_.goboom(314)
 _st_.blockbegin()
 try:
          var('D_m,D,a,A,d')
@@ -130,40 +130,40 @@ try:
          z5=2*((D-D_m)/(A-a))
          z6=2*(D-D_m)/(A-a-D)
 except:
- _st_.goboom(302)
+ _st_.goboom(331)
 _st_.blockend()
 try:
  _st_.inline(17, latex(z))
 except:
- _st_.goboom(305)
+ _st_.goboom(334)
 try:
  _st_.inline(18, latex(z2))
 except:
- _st_.goboom(310)
+ _st_.goboom(339)
 try:
  _st_.inline(19, latex(z3))
 except:
- _st_.goboom(315)
+ _st_.goboom(344)
 try:
  _st_.inline(20, latex(be))
 except:
- _st_.goboom(315)
+ _st_.goboom(344)
 try:
  _st_.inline(21, latex(z4))
 except:
- _st_.goboom(321)
+ _st_.goboom(350)
 try:
  _st_.inline(22, latex(z5))
 except:
- _st_.goboom(321)
+ _st_.goboom(350)
 try:
  _st_.inline(23, latex(z4))
 except:
- _st_.goboom(328)
+ _st_.goboom(357)
 try:
  _st_.inline(24, latex(z6))
 except:
- _st_.goboom(328)
+ _st_.goboom(357)
 _st_.blockbegin()
 try:
          var('k,tau_a,tau_v,tau_c')
@@ -171,93 +171,93 @@ try:
          var('V_v')
          z2=V_v/(b*d)
 except:
- _st_.goboom(336)
+ _st_.goboom(365)
 _st_.blockend()
 try:
  _st_.inline(25, latex(tau_v))
 except:
- _st_.goboom(337)
+ _st_.goboom(366)
 try:
  _st_.inline(26, latex(tau_a))
 except:
- _st_.goboom(337)
+ _st_.goboom(367)
 try:
  _st_.inline(27, latex(tau_a))
 except:
- _st_.goboom(337)
+ _st_.goboom(369)
 try:
  _st_.inline(28, latex(tau_a))
 except:
- _st_.goboom(341)
+ _st_.goboom(373)
 try:
  _st_.inline(29, latex(z))
 except:
- _st_.goboom(341)
+ _st_.goboom(373)
 try:
  _st_.inline(30, latex(tau_c))
 except:
- _st_.goboom(343)
+ _st_.goboom(375)
 try:
  _st_.inline(31, latex(tau_c))
 except:
- _st_.goboom(343)
+ _st_.goboom(377)
 try:
  _st_.inline(32, latex(tau_v))
 except:
- _st_.goboom(367)
+ _st_.goboom(412)
 try:
  _st_.inline(33, latex(z2))
 except:
- _st_.goboom(367)
+ _st_.goboom(412)
 _st_.blockbegin()
 try:
          z=((A-a)/2)-4
 except:
- _st_.goboom(396)
+ _st_.goboom(446)
 _st_.blockend()
 try:
  _st_.inline(34, latex(z))
 except:
- _st_.goboom(402)
+ _st_.goboom(455)
 _st_.blockbegin()
 try:
    var('PP,pp,aa,ff_ck,ff_y')
    PP = 1000
-   pp = 200
-   aa = 400
+   pp = .02
+   aa = 40
    ff_ck = 15
    ff_y = 415
 except:
- _st_.goboom(440)
+ _st_.goboom(520)
 _st_.blockend()
 try:
  _st_.inline(35, latex(PP))
 except:
- _st_.goboom(442)
+ _st_.goboom(522)
 try:
  _st_.inline(36, latex(pp.n(digits=0)))
 except:
- _st_.goboom(443)
+ _st_.goboom(523)
 try:
  _st_.inline(37, latex(aa))
 except:
- _st_.goboom(444)
+ _st_.goboom(524)
 try:
  _st_.inline(38, latex(ff_ck))
 except:
- _st_.goboom(445)
+ _st_.goboom(525)
 try:
  _st_.inline(39, latex(ff_y))
 except:
- _st_.goboom(446)
+ _st_.goboom(526)
 _st_.blockbegin()
 try:
  def multipleCheck(number, divisor=25):
  # If not directly divisible by divisor.
    if (number % divisor) != 0:
-       y = int(number / divisor)       # flooring the value.
-       y += 1                          # Adding 1 for choosing next multiple.
-       final_value = y * divisor       # Multiply the new quotient with divisor.
+       y = int(number / divisor)   # flooring the value.
+       y += 1                      # Adding 1 for choosing next multiple.
+       final_value = y * divisor   # Multiply the new quotient with divisor.
  
    elif number == 0:
        final_value = divisor
@@ -266,7 +266,7 @@ try:
        final_value = number
    return final_value
 except:
- _st_.goboom(466)
+ _st_.goboom(546)
 _st_.blockend()
 _st_.blockbegin()
 try:
@@ -276,43 +276,47 @@ try:
  
    s0=f(P,p)
    s=f(PP,pp)
-   s1=A(PP,pp).n(digits=4)
-   s1=multipleCheck(s1)
+   o1=A(PP,pp).n(digits=4)
+   s1=multipleCheck(o1)
 except:
- _st_.goboom(477)
+ _st_.goboom(557)
 _st_.blockend()
 try:
  _st_.inline(40, latex(s0))
 except:
- _st_.goboom(480)
+ _st_.goboom(560)
 try:
  _st_.inline(41, latex(s.n(digits=5)))
 except:
- _st_.goboom(480)
+ _st_.goboom(560)
 try:
- _st_.inline(42, latex(s1))
+ _st_.inline(42, latex(o1))
 except:
- _st_.goboom(481)
+ _st_.goboom(561)
+try:
+ _st_.inline(43, latex(s1))
+except:
+ _st_.goboom(562)
 _st_.blockbegin()
 try:
    p(A)=1000/(A*A)
    s2=p(s1)
    s2 = s2.n(digits=4)
 except:
- _st_.goboom(487)
+ _st_.goboom(568)
 _st_.blockend()
-try:
- _st_.inline(43, latex(s1))
-except:
- _st_.goboom(489)
 try:
  _st_.inline(44, latex(s1))
 except:
- _st_.goboom(489)
+ _st_.goboom(570)
 try:
- _st_.inline(45, latex(s2))
+ _st_.inline(45, latex(s1))
 except:
- _st_.goboom(490)
+ _st_.goboom(570)
+try:
+ _st_.inline(46, latex(s2))
+except:
+ _st_.goboom(571)
 _st_.blockbegin()
 try:
    var('AA,const')
@@ -321,20 +325,20 @@ try:
    s3=f1(A)
    s4=f1(s1)
 except:
- _st_.goboom(498)
+ _st_.goboom(579)
 _st_.blockend()
 try:
- _st_.inline(46, latex(pp.n(digits=2)))
+ _st_.inline(47, latex(pp.n(digits=2)))
 except:
- _st_.goboom(500)
+ _st_.goboom(581)
 try:
- _st_.inline(47, latex(f1(A)))
+ _st_.inline(48, latex(f1(A)))
 except:
- _st_.goboom(502)
+ _st_.goboom(584)
 try:
- _st_.inline(48, latex(s4))
+ _st_.inline(49, latex(s4))
 except:
- _st_.goboom(502)
+ _st_.goboom(584)
 _st_.blockbegin()
 try:
    var('alpha')
@@ -349,33 +353,51 @@ try:
    f4(A,q)=q*A
    s8=f4(A,s7)
    s9=f4(s1,s7)
+ 
+   e1(a,k) =1/(-1/2*(a*k + 2*a - sqrt(a^2*k^2 + 4*k + 4))/(k + 1))
+   o2 = e1(a,k)
+   o3 = e1(s7,s66)
+   o4 = o3.n(digits=2)
+ 
+   s9 = f4(s1,o4)
+   o9 = s9.n(digits=3)
+ 
+   e3(A,o) = A/o
+   o7 = e3(A,o4)
+   s9 = e3(s1,o4)
+ 
+   o5 = f3(A,d)
 except:
- _st_.goboom(518)
+ _st_.goboom(614)
 _st_.blockend()
 try:
- _st_.inline(49, latex(s5))
+ _st_.inline(50, latex(s5))
 except:
- _st_.goboom(523)
+ _st_.goboom(619)
 try:
- _st_.inline(50, latex(s66.n(digits=4)))
+ _st_.inline(51, latex(s66.n(digits=4)))
 except:
- _st_.goboom(523)
+ _st_.goboom(619)
 try:
- _st_.inline(51, latex(s6))
+ _st_.inline(52, latex(s6))
 except:
- _st_.goboom(524)
+ _st_.goboom(620)
 try:
- _st_.inline(52, latex(s7))
+ _st_.inline(53, latex(s7))
 except:
- _st_.goboom(524)
+ _st_.goboom(620)
 try:
- _st_.inline(53, latex(s8))
+ _st_.inline(54, latex(o5))
 except:
- _st_.goboom(526)
+ _st_.goboom(627)
 try:
- _st_.inline(54, latex(s9.n(digits=3)))
+ _st_.inline(55, latex(o4))
 except:
- _st_.goboom(526)
+ _st_.goboom(627)
+try:
+ _st_.inline(56, latex(s9))
+except:
+ _st_.goboom(629)
 _st_.blockbegin()
 try:
    var('cc,pphi')
@@ -401,49 +423,53 @@ try:
    s16=f8(M_1,A,d)
    s17=f8(s13,s1,s15)
  
+   if(s4>s107):
+     s109=s4
+   else:
+     s109 = multipleCheck(s107)
 except:
- _st_.goboom(552)
+ _st_.goboom(661)
 _st_.blockend()
 try:
- _st_.inline(55, latex(cc.n(digits=2)))
+ _st_.inline(57, latex(cc.n(digits=2)))
 except:
- _st_.goboom(554)
+ _st_.goboom(663)
 try:
- _st_.inline(56, latex(pphi.n(digits=2)))
+ _st_.inline(58, latex(pphi.n(digits=2)))
 except:
- _st_.goboom(554)
+ _st_.goboom(664)
 try:
- _st_.inline(57, latex(s10))
+ _st_.inline(59, latex(s10))
 except:
- _st_.goboom(555)
+ _st_.goboom(665)
 try:
- _st_.inline(58, latex(s107))
+ _st_.inline(60, latex(s107))
 except:
- _st_.goboom(555)
+ _st_.goboom(665)
 try:
- _st_.inline(59, latex(s11))
+ _st_.inline(61, latex(s109))
 except:
- _st_.goboom(556)
+ _st_.goboom(666)
 try:
- _st_.inline(60, latex(s12))
+ _st_.inline(62, latex(s12))
 except:
- _st_.goboom(560)
+ _st_.goboom(670)
 try:
- _st_.inline(61, latex(s13.n(digits=6)))
+ _st_.inline(63, latex(s13.n(digits=6)))
 except:
- _st_.goboom(560)
+ _st_.goboom(670)
 try:
- _st_.inline(62, latex(s14))
+ _st_.inline(64, latex(s14))
 except:
- _st_.goboom(563)
+ _st_.goboom(673)
 try:
- _st_.inline(63, latex(s15.n(digits=4)))
+ _st_.inline(65, latex(s15.n(digits=4)))
 except:
- _st_.goboom(563)
+ _st_.goboom(673)
 try:
- _st_.inline(64, latex(s17.n(digits=4)))
+ _st_.inline(66, latex(s17.n(digits=4)))
 except:
- _st_.goboom(564)
+ _st_.goboom(674)
 _st_.blockbegin()
 try:
    var('mu')
@@ -473,37 +499,38 @@ try:
    w1(d4,r) = (d4*3.14*r**2)/100
    d2=w1(d3,6)
    d2 = d2.n(digits=2)
+ 
 except:
- _st_.goboom(593)
+ _st_.goboom(704)
 _st_.blockend()
 try:
- _st_.inline(65, latex(mu.n(digits=2)))
+ _st_.inline(67, latex(mu.n(digits=2)))
 except:
- _st_.goboom(594)
+ _st_.goboom(705)
 try:
- _st_.inline(66, latex(s18))
+ _st_.inline(68, latex(s18))
 except:
- _st_.goboom(595)
+ _st_.goboom(706)
 try:
- _st_.inline(67, latex(s19))
+ _st_.inline(69, latex(s19))
 except:
- _st_.goboom(595)
+ _st_.goboom(706)
 try:
- _st_.inline(68, latex(s20))
+ _st_.inline(70, latex(s20))
 except:
- _st_.goboom(596)
+ _st_.goboom(707)
 try:
- _st_.inline(69, latex(s22))
+ _st_.inline(71, latex(s22))
 except:
- _st_.goboom(596)
+ _st_.goboom(707)
 try:
- _st_.inline(70, latex(s23))
+ _st_.inline(72, latex(s23))
 except:
- _st_.goboom(601)
+ _st_.goboom(713)
 try:
- _st_.inline(71, latex(s24))
+ _st_.inline(73, latex(s24))
 except:
- _st_.goboom(601)
+ _st_.goboom(713)
 _st_.blockbegin()
 try:
    f12(p,A,a,d)=p*A*(((A-a)/2)-d)
@@ -518,52 +545,52 @@ try:
    s29 = f14(A_s,b,d)
    s30 = f14(d2,100,s15)
 except:
- _st_.goboom(619)
+ _st_.goboom(731)
 _st_.blockend()
 try:
- _st_.inline(72, latex(s25))
+ _st_.inline(74, latex(s25))
 except:
- _st_.goboom(621)
+ _st_.goboom(733)
 try:
- _st_.inline(73, latex(s26.n(digits=4)))
+ _st_.inline(75, latex(s26.n(digits=4)))
 except:
- _st_.goboom(621)
+ _st_.goboom(733)
 try:
- _st_.inline(74, latex(s27))
+ _st_.inline(76, latex(s27))
 except:
- _st_.goboom(624)
+ _st_.goboom(736)
 try:
- _st_.inline(75, latex(s28))
+ _st_.inline(77, latex(s28))
 except:
- _st_.goboom(624)
+ _st_.goboom(736)
 try:
- _st_.inline(76, latex(s29))
+ _st_.inline(78, latex(s29))
 except:
- _st_.goboom(625)
+ _st_.goboom(737)
 try:
- _st_.inline(77, latex(s30))
+ _st_.inline(79, latex(s30))
 except:
- _st_.goboom(625)
-try:
- _st_.inline(78, latex(tau_c))
-except:
- _st_.goboom(629)
-try:
- _st_.inline(79, latex(tau_a))
-except:
- _st_.goboom(633)
+ _st_.goboom(737)
 try:
  _st_.inline(80, latex(tau_c))
 except:
- _st_.goboom(633)
+ _st_.goboom(741)
 try:
- _st_.inline(81, latex(tau_v))
+ _st_.inline(81, latex(tau_a))
 except:
- _st_.goboom(635)
+ _st_.goboom(745)
 try:
- _st_.inline(82, latex(tau_a))
+ _st_.inline(82, latex(tau_c))
 except:
- _st_.goboom(635)
+ _st_.goboom(745)
+try:
+ _st_.inline(83, latex(tau_v))
+except:
+ _st_.goboom(747)
+try:
+ _st_.inline(84, latex(tau_a))
+except:
+ _st_.goboom(747)
 _st_.blockbegin()
 try:
    f15(phi) = 55*phi
@@ -575,28 +602,28 @@ try:
    s34 = f16(s1,aa)
    s34 = s34.n(digits=3)
 except:
- _st_.goboom(650)
+ _st_.goboom(763)
 _st_.blockend()
 try:
- _st_.inline(83, latex(s31))
+ _st_.inline(85, latex(s31))
 except:
- _st_.goboom(652)
+ _st_.goboom(765)
 try:
- _st_.inline(84, latex(s32.n(digits=2)))
+ _st_.inline(86, latex(s32.n(digits=2)))
 except:
- _st_.goboom(652)
+ _st_.goboom(765)
 try:
- _st_.inline(85, latex(s33))
+ _st_.inline(87, latex(s33))
 except:
- _st_.goboom(655)
+ _st_.goboom(768)
 try:
- _st_.inline(86, latex(s34))
+ _st_.inline(88, latex(s34))
 except:
- _st_.goboom(655)
+ _st_.goboom(768)
 try:
- _st_.inline(87, latex(s11))
+ _st_.inline(89, latex(s11))
 except:
- _st_.goboom(659)
+ _st_.goboom(773)
 _st_.blockbegin()
 try:
          var('a,A,d,k')
@@ -612,10 +639,10 @@ try:
          zz=z1+z2+z3+z4+z5+z6
  
 except:
- _st_.goboom(843)
+ _st_.goboom(954)
 _st_.blockend()
 try:
  _st_.plot(0, format='notprovided', _p_=zz,axes_labels= ['$k$','$d/A$'])
 except:
- _st_.goboom(845)
+ _st_.goboom(957)
 _st_.endofdoc()

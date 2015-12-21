@@ -142,16 +142,16 @@ $\tau_{v} = \tau_{a}$, \equmacro (\ref{eq:perimeterShearStress}) and
 (\ref{eq:allowable2DShearStress}) give,
 
 \begin{sagesilent}
-  var('a,A,d,fck,p,k,consst')
+  var('a,A,d,fck,p,k,consst,alpha')
   consst = .067
   consst = consst.n(digits=3)
   z1=(1-(a/A)**2-2*(a/A)*(d/A)-(d/A)**2)/((a/A)*(d/A)+(d/A)**2)
-  z2=(consst*fck**(1/2))/p
+  z2=(consst*fck**(1/2)*alpha)/p
 \end{sagesilent}
 
 \begin{equation}
   \label{eq:areafck}
-  \sage{z1}=\sage{z2}=\sage{k}
+  \sage{z1}=\sage{z2}=\sage{k} (say)
 \end{equation}
 For a square sloped footing with a square column of side $a$
 (\figmacro \ref{sectionslopefooting}),
@@ -513,8 +513,8 @@ than the footings of uniform depth.
 \begin{sagesilent}
   var('PP,pp,aa,ff_ck,ff_y')
   PP = 1000
-  pp = 200
-  aa = 400
+  pp = .02
+  aa = 40
   ff_ck = 15
   ff_y = 415
 \end{sagesilent}
@@ -552,12 +552,13 @@ def multipleCheck(number, divisor=25):
   
   s0=f(P,p)
   s=f(PP,pp)
-  s1=A(PP,pp).n(digits=4)
-  s1=multipleCheck(s1)
+  o1=A(PP,pp).n(digits=4)
+  s1=multipleCheck(o1)
 \end{sagesilent}
 
 \equmacro \ref{eq:footingArea} gives,        
 $$A^2 = \sage{s0} = \sage{s.n(digits=5)} cm^2$$
+$$A = \sage{o1} cm$$
 $$A = \sage{s1} cm$$
 
 \begin{sagesilent}
@@ -596,6 +597,20 @@ $$D = \sage{f1(A)} = \sage{s4} cm$$
   f4(A,q)=q*A
   s8=f4(A,s7)
   s9=f4(s1,s7)
+
+  e1(a,k) =1/(-1/2*(a*k + 2*a - sqrt(a^2*k^2 + 4*k + 4))/(k + 1))          
+  o2 = e1(a,k)                                                          
+  o3 = e1(s7,s66) 
+  o4 = o3.n(digits=2) 
+  
+  s9 = f4(s1,o4)
+  o9 = s9.n(digits=3)
+
+  e3(A,o) = A/o
+  o7 = e3(A,o4)
+  s9 = e3(s1,o4)
+
+  o5 = f3(A,d)
 \end{sagesilent}
 
 \item \textbf{Check for perimeter shear}   
@@ -604,8 +619,17 @@ $$D = \sage{f1(A)} = \sage{s4} cm$$
 $$k = \sage{s5} = \sage{s66.n(digits=4)}$$
 $$\sage{s6} = \sage{s7}$$
 
+\begin{comment}
 $$d = \sage{s8} = \sage{s9.n(digits=3)}$$ 
-            
+\end{comment}
+
+
+$$\sage{o5} = \sage{o4}$$
+
+$$d = \sage{s9}$$ 
+
+%$$d = \sage{s9}$$
+
 \begin{sagesilent}
   var('cc,pphi')
   cc=4
@@ -630,12 +654,16 @@ $$d = \sage{s8} = \sage{s9.n(digits=3)}$$
   s16=f8(M_1,A,d)
   s17=f8(s13,s1,s15)
   
+  if(s4>s107):
+    s109=s4
+  else:
+    s109 = multipleCheck(s107)
 \end{sagesilent}
 
 \equmacro \ref{eq:depth-cover} gives with $c = \sage{cc.n(digits=2)} cm,
 \phi=\sage{pphi.n(digits=2)}$,
 $$D = \sage{s10} = \sage{s107} cm$$
-$$D = \sage{s11} cm \text{ is safe} $$
+$$D = \sage{s109} cm \text{ is safe} $$
 
 \item  \textbf{Design for moment}  
 \equmacro \ref{eq:criticalMoment} gives, 
@@ -672,6 +700,7 @@ $$k = \sage{s17.n(digits=4)}$$
   w1(d4,r) = (d4*3.14*r**2)/100
   d2=w1(d3,6)
   d2 = d2.n(digits=2)
+
 \end{sagesilent}
 $$\mu = \sage{mu.n(digits=2)}$$
 $$A_{st} = \sage{s18} = \sage{s19} cm^2$$
@@ -745,8 +774,12 @@ It may be noted that with $D$ = $\sage{s11}$  $cm$, this type of footing
 of uniform depth is   not economical. Footing of Types ($b$) and ($c$)
 with sloping depth would be more economical than   the present design.
 
+
+\begin{comment}
 \equmacro \ref{eq:footingArea} gives,
-        $$A^2=\frac{1000}{0.02}=50,000 cm^2$$
+
+\begin{comment}
+$$A^2=\frac{1000}{0.02}=50,000 cm^2$$
         $$A=223.6 cm$$
 Provided $225 \times 225$ base and
         $$p = \frac{100}{225 \times 225} = 0.01975 kN/cm^2$$
@@ -813,7 +846,11 @@ critical section.
 It may be noted that with $D$ = 50 $cm$, this type of footing of uniform
 depth is not economical. Footing of Types ($b$) and ($c$) with sloping 
 depth would be more economical than the present design.
+
+\end{comment}
 \end{enumerate}
+
+
 %\end{example}%------------------second numerical example-----------------%
 \textbf{Example 12.2. Rectangular sloped footing of Type ($c$).}\\
 \textbf{Given:}
