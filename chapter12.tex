@@ -1,5 +1,5 @@
 %----------------------main document start------------------%
-\chapter{Individual Spread Footing}
+                                                                                                                                                                                                 \chapter{Individual Spread Footing}
 \section{Introduction} Clause 34 of the  \citetitle{IS2000} gives the
 provisions governing the design of reinforced concrete footings.  These
 provisions are similar to those given by the \citeauthor{aci1981aci}. 
@@ -773,85 +773,13 @@ the critical   section.
 It may be noted that with $D$ = $\sage{s11}$  $cm$, this type of footing
 of uniform depth is   not economical. Footing of Types ($b$) and ($c$)
 with sloping depth would be more economical than   the present design.
-
-
-\begin{comment}
-\equmacro \ref{eq:footingArea} gives,
-
-\begin{comment}
-$$A^2=\frac{1000}{0.02}=50,000 cm^2$$
-        $$A=223.6 cm$$
-Provided $225 \times 225$ base and
-        $$p = \frac{100}{225 \times 225} = 0.01975 kN/cm^2$$
-        \tablemacro \ref{chaptertable} gives for p = 0.02, and steel
-        \Fefouronefivemacro,
-        $$\frac{D}{A} = \frac{1}{4.5} \text{ or } D = \frac{225}{4.5}=50 
-       \text{cm}$$
-\item   \textbf{Check for perimeter shear}
-        \chartmacro \ref{Dummy chart} gives for,
-        $$k=\frac{0.67\sqrt{15}\times 1.0}{0.01975}=13.14$$
-        $$\frac{a}{A}=\frac{40}{225}=0.18$$
-        $$\frac{d}{A} = 0.18$$
-        $$d=0.18 \times 225 = 40.5$$
-\equmacro \ref{eq:depth-cover} gives with $c = 4.0 cm,\phi=1.2cm$,   
-        $$D=40.5+4.0+1.2=45.7 cm$$
-        $$D = 50cm \text{ is safe.}$$
-\item  \textbf{Design for moment}
-\equmacro \ref{eq:criticalMoment} gives,
-$$M_{1-1}=0.01975 \times225(225-40)^2/8=19011kN/cm$$
-With rectangular compression zone, \chartmacro (2.2) gives for,
-        $$d=50-4.0-1.2=44.8cm$$
-        $$k=\frac{1.5\times19011}{1.5\times225\times(44.8)^2}=0.042$$
-        $$\mu = 0.0475$$
-        $$A_{st}=\frac{0.0475\times225\times44.8\times15}{0.87\times415}=19.89cm^2$$
-        $$\frac{A_{st}}{A}=\frac{19.89}{2.25}=8.84cm^2/m $$
-$\phi 12/12 c/c $ both ways provided giving an area$ = 9.42cm^2/m$
-
-\tablemacro 11.4 gives the minimum tension steel area in footings taken 
-as slab,
-$$A_{st}(min)=0.12\times50=6.0cm^2/m$$
-which is exceeded by that provided.
-\item  \textbf{Design for beam shear}
-        \equmacro \ref{eq:shear22} gives,
-        $$S_{2-2}=0.01975\times225\bigg[\frac{225-40}{2}-44.8\bigg]=212kN$$
-        \equmacro \ref{eq:shearstress22} gives
-\begin{sagesilent}
-       var('tau_v,tau_c,tau_a')
-\end{sagesilent}
-$$\sage{tau_v}=\frac{1.5\times212}{225\times44.8}=0.032kN/cm^2$$
-For $$\frac{100A_{s}}{bd}=\frac{100\times9.42}{100\times44.8}=0.21,$$
-
-Table 19 of the Code gives,
-$$\sage{tau_c}=0.32N/mm^2$$
-With
-$$k = 1.0 $$
-\equmacro \ref{eq:concretesolidslabs} gives, 
-        $$\sage{tau_a}=\sage{tau_c}=0.032kN/cm^2$$
-With        
-$$\sage{tau_v}=\sage{tau_a}, D = 50 cm \text{ is safe}$$
-
-\item  \textbf{Check on development length of footing bars}
-
-\tablemacro (11.13) gives, for footings bars of $\phi$ 12 (\Fefouronefivemacro),
-
-$L_d$ (tension) = 55$\phi$ = 55 x 1.2 = 66 cm.
-
-\equmacro \ref{eq:uniformallydeepfooting} gives, 
-
-$$y=\bigg[\frac{(225-40)}{2}-4.0\bigg]=88.5cm$$
-
-with $y > L_d$ (tension), footing bars will develop full strength at the 
-critical section.
-
-It may be noted that with $D$ = 50 $cm$, this type of footing of uniform
-depth is not economical. Footing of Types ($b$) and ($c$) with sloping 
-depth would be more economical than the present design.
-
-\end{comment}
 \end{enumerate}
 
+%------------------second numerical example------------------------%
 
-%\end{example}%------------------second numerical example-----------------%
+
+%==================================================================%
+\begin{comment}
 \textbf{Example 12.2. Rectangular sloped footing of Type ($c$).}\\
 \textbf{Given:}
 Same as in Ex. 12.1 with
@@ -937,6 +865,9 @@ $$k=0.067\frac{\sqrt{f_{ck}}}{p}$$
 \equmacro \ref{eq:uniformallydeepfooting} gives,
 $$y=\Bigg[\frac{(215-40)}{2}-4.00\Bigg]=83.5 \text{cm } > 66 \text{cm OK,}$$
 \end{enumerate}
+\end{comment}
+
+%=================================================================================%
 %--------------------------------sage graph---------------------------------------%
 \begin{sagesilent}                                                      
         var('a,A,d,k')                                                  

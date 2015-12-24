@@ -639,10 +639,10 @@ try:
          zz=z1+z2+z3+z4+z5+z6
  
 except:
- _st_.goboom(954)
+ _st_.goboom(885)
 _st_.blockend()
 try:
  _st_.plot(0, format='notprovided', _p_=zz,axes_labels= ['$k$','$d/A$'])
 except:
- _st_.goboom(957)
+ _st_.goboom(888)
 _st_.endofdoc()
